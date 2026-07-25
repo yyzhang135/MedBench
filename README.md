@@ -27,3 +27,16 @@ MedBench/
 ├── evaluate/            # 纯结构化的 JSONL 评测脚本 (NDCG, Recall 计算)
 ├── manual_annotation/   # 多专家交叉标注对齐与投票程序 (一致性检验)
 └── README.md            # 项目说明文档
+
+
+## 📝 引用 (Citation)
+
+如果您在研究中使用了 MedBench 的代码或数据集，请引用我们的论文：
+
+```bibtex
+@inproceedings{ma2026medbench,
+  title={MedBench: A Comprehensive Benchmark for Medical Retrieval-Augmented Generation},
+  author={Ma, Haiping and Zhou, Fang and Zhang, Yiyu and Hu, Jiaxue and Ma, Jun and Zhang, Xingyi},
+  booktitle={Proceedings of the 33nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  year={2027}
+}
