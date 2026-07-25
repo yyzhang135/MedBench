@@ -28,7 +28,7 @@ MedBench/
 ├── manual_annotation/   # 多专家交叉标注对齐与投票程序 (一致性检验)
 └── README.md            # 项目说明文档
 
-
+```
 ## 📝 引用 (Citation)
 
 如果您在研究中使用了 MedBench 的代码或数据集，请引用我们的论文：
