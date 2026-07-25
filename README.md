@@ -21,8 +21,6 @@
 
 ## 📂 仓库结构 (Repository Structure)
 
-本仓库秉承**“代码与数据解耦”**的原则，仅包含轻量级的核心执行脚本。所有的 JSONL 格式结构化数据集均托管在 Hugging Face。
-
 ```text
 MedBench/
 ├── construct/           # 数据集构建脚本 (例如: 合并相关性标签集合)
