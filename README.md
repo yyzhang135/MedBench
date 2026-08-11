@@ -29,6 +29,31 @@ MedBench/
 └── README.md            # 项目说明文档
 
 ```
+## 🏆 盲测打榜指南 (Submit to Leaderboard)
+
+为了绝对保证测试集的纯洁性，防止数据泄露与定向过拟合 (Data Contamination)，MedBench 采用严苛的**纯黑盒盲测机制 (Blind Test)**。真实的 336 万篇医学候选文档和 1970 个查询集不予公开。
+
+我们欢迎社区提交模型参与评测，请按照以下步骤操作：
+
+### 1. 本地开发与调试
+我们在 `data/` 目录下提供了微型的假数据（Dummy Data）：
+* `dummy_corpus.jsonl`
+* `dummy_queries.jsonl`
+
+它们的 JSON 字段格式与服务器上的绝密真实数据**完全一致**。请使用这些数据在您的本地调通代码。
+
+### 2. 封装推理代码
+进入 `submission_template/` 目录，我们为您提供了标准的启动包：
+* **`run_inference.py`**: 请在该脚本中加载您的模型（Embedding/Reranker）。您的脚本必须能接收 `--corpus_path`, `--query_path` 和 `--output_path` 这三个参数，并按规范输出预测结果。
+* **`Dockerfile`**: 请在此配置您的运行环境。
+
+### 3. 构建并推送镜像
+在本地测试无误后，将您的代码构建为 Docker 镜像，并推送到公开的镜像仓库（如 Docker Hub）或提供私有仓库的拉取权限。
+```bash
+docker build -t your_dockerhub_name/medbench_model:v1 .
+docker push your_dockerhub_name/medbench_model:v1
+
+```
 ## 📝 引用 (Citation)
 
 如果您在研究中使用了 MedBench 的代码或数据集，请引用我们的论文：
