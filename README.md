@@ -53,6 +53,10 @@ MedBench/
 docker build -t your_dockerhub_name/medbench_model:v1 .
 docker push your_dockerhub_name/medbench_model:v1
 
+### 4. 提交评测申请
+请在 GitHub 提交一个 Issue（标题格式：[Submission] 您的机构/团队名 - 模型名），或发送邮件至作者邮箱，附上您的 Docker 镜像拉取地址。
+我们的后台自动化沙箱引擎（完全物理断网运行）将拉取您的镜像，计算相关指标。
+
 ```
 ## 📝 引用 (Citation)
 
