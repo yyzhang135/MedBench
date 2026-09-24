@@ -69,6 +69,7 @@ docker push your_dockerhub_name/medbench_model:v1
   year={2027}
 }
 
+```
 ## 🏆 排行榜 (Leaderboard)
 
 以下是9款主流检索模型在 MedBench 医疗语料库下的零样本（Zero-shot）检索性能表现。为提供更全面的横向对比，榜单同时收录了各模型在 AIR-Bench 24.05 (Healthcare) 与 MTEB (Healthcare) 上的基准成绩。
