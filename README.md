@@ -3,6 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Conference](https://img.shields.io/badge/KDD-2027-red.svg)]()
+[![ModelScope Studio](https://img.shields.io/badge/%F0%9F%A4%96%20ModelScope-Leaderboard-624aff)](https://www.modelscope.cn/studios/zhangyiyu/MedBench-Leaderboard)
 
 > **📢 最新动态 (News):** 我们的论文《MedBench: A Comprehensive Benchmark for Medical Retrieval-Augmented Generation》已提交至 **KDD 2027**。
 
@@ -72,21 +73,4 @@ docker push your_dockerhub_name/medbench_model:v1
 ```
 ## 🏆 排行榜 (Leaderboard)
 
-以下是9款主流检索模型在 MedBench 医疗语料库下的零样本（Zero-shot）检索性能表现。为提供更全面的横向对比，榜单同时收录了各模型在 AIR-Bench 24.05 (Healthcare) 与 MTEB (Healthcare) 上的基准成绩。
-
-**主榜单按 MedBench 的 nDCG@10(%) 指标降序排列：**
-
-| 排名 | 模型名称 (Model) | 架构分类 (Category) | 参数量 (Size) | MedBench nDCG@10(%) ⬇️ | AIR-Bench 24.05 nDCG@10(%) | MTEB (Healthcare) nDCG@10(%) |
-|:---:|:---|:---|:---:|:---:|:---:|:---:|
-| 🥇 1 | **multilingual-e5-large-instruct** | Large-size | 0.6B | **48.40** | 39.76 | 61.14 |
-| 🥈 2 | **inf-retriever-v1-1.5b** | LLM-based | 1.5B | 41.60 | 40.35 | 65.02 |
-| 🥉 3 | **multilingual-e5-small** | Large-size | 0.1B | 40.34 | 28.97 | 56.75 |
-| 4 | gte-Qwen2-1.5B-instruct | LLM-based | 1.5B | 39.52 | 39.13 | 67.59 |
-| 5 | jina-embeddings-v3 | Large-size | 0.6B | 39.35 | 38.92 | 62.25 |
-| 6 | gte-Qwen2-7B-instruct | LLM-based | 7B | 33.70 | 38.66 | 68.09 |
-| 7 | inf-retriever-v1 | LLM-based | 7B | 24.23 | **41.82** | 68.80 |
-| 8 | gte-multilingual-base | Large-size | 0.3B | 20.60 | 37.94 | 58.36 |
-| 9 | gte-large-zh | Large-size | 0.3B | 10.71 | 29.84 | **86.46** |
-
-> 📌 **核心洞察：** 
-> 评测结果显示，通用医疗领域的检索表现与高难度专业医疗检索之间存在显著的领域壁垒。例如，`gte-large-zh` 在 MTEB (Healthcare) 中取得了 86.46% 的最高分，但在 MedBench 中仅获得 10.71% 的底层成绩；而 `multilingual-e5-small` 在其他双榜中均垫底（排名第9），却在 MedBench 冲入了前三名。这充分印证了构建 MedBench 这一垂直高难度基准的必要性。
+> 🌐 **在线交互式排行榜：** 欢迎访问我们的 **[🤖 魔搭社区在线榜单 (ModelScope Leaderboard)](https://www.modelscope.cn/studios/zhangyiyu/MedBench-Leaderboard)**，获取最新模型动态排名。
